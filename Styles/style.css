@@ -9,6 +9,7 @@
 	font-size: 62.5%;
 	font-family: "Noto Serif Display", serif;
 }
+
 h1 {
 	font-size: 2rem;
 }
@@ -25,6 +26,17 @@ h4 {
 	font-size: 1rem;
 }
 
+input,
+select,
+th,
+td,
+ul,
+ol,
+li,
+a {
+	font-size: 1rem;
+}
+
 #NAV {
 	font-size: 1.2rem;
 	background-color: rgba(11, 23, 40, 100);
@@ -36,54 +48,68 @@ h4 {
 	background-color: rgba(11, 23, 40, 100);
 }
 
-input,
-select,
-th,
-td,
-ul,
-ol,
-li {
-	font-size: 1rem;
-}
-
 .nav__container {
 	display: flex;
 	position: relative;
-	justify-items: center;
-	justify-content: space-between;
+	height: 3rem;
+	align-items: center;
 }
-.nav__content__container {
-	display: flex;
-	justify-items: center;
-	justify-content: center;
-	justify-self: center;
-}
-.nav__mobile-menu {
+
+.nav__mobile-menu__container {
 	visibility: hidden;
 	position: absolute;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 0 1rem;
 }
-.nav__list {
-	text-decoration: none;
-	color: whitesmoke;
-	list-style-type: none;
+
+.nav__mobile-menu__hamburger {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.nav__content__container {
 	display: flex;
-	justify-content: space-between;
+	position: relative;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1rem;
 }
-.nav__list__item a {
+
+.nav__title__container {
+	justify-items: center;
+}
+
+.nav__link-list__container {
+	display: block;
+	width: auto;
+}
+
+.nav__link-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__link-list__item {
 	text-decoration: none;
 	color: whitesmoke;
+	margin-left: 1rem;
+	font-size: 1.5rem;
 }
 
 @media screen and (max-width: 912px) {
-	.nav__mobile-menu {
+	.nav__mobile-menu__container {
+		position: relative;
 		color: whitesmoke;
 		visibility: visible;
-		justify-self: center;
-		margin-left: 1rem;
-		margin-top: 0.25rem;
 	}
-	.nav__list {
-		display: relative;
+
+	.nav__link-list__container {
+		display: none;
 		visibility: hidden;
 	}
 }
