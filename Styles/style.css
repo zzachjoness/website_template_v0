@@ -118,7 +118,39 @@ a {
 /* NAV 2 TESTING */
 
 #NAV2 {
-	margin-top: 2rem;
 	background-color: rgba(11, 23, 40, 100);
 	color: whitesmoke;
+	height: 48px;
+}
+
+.nav__container2 {
+	height: 100%;
+	width: 100%;
+}
+
+.nav__mobile__container2 {
+	height: 48px;
+	width: 100%;
+}
+
+.nav__mobile__menu-icon2 {
+	height: 48px;
+}
+
+.nav__mobile__menu-icon--open2 {
+	left: 0;
+	color: #fff;
+	position: absolute;
+	height: 48px;
+	width: 48px;
+	background-color: darkturquoise;
+}
+
+.nav__mobile__menu-icon--anchor2 {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
 }
