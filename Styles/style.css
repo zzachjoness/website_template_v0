@@ -118,7 +118,8 @@ a {
 /* NAV 2 TESTING */
 
 #NAV2 {
-	background-color: rgba(11, 23, 40, 100);
+	/* background-color: rgba(11, 23, 40, 100); */
+	background-color: darkolivegreen;
 	color: whitesmoke;
 	height: 48px;
 }
@@ -143,7 +144,6 @@ a {
 	position: absolute;
 	height: 48px;
 	width: 48px;
-	background-color: darkturquoise;
 }
 
 .nav__mobile__menu-icon--anchor2 {
@@ -153,4 +153,90 @@ a {
 	overflow: hidden;
 	height: 1px;
 	width: 1px;
+}
+.nav__mobile__menu-icon--close2 {
+	display: none;
+	left: 0;
+	color: #fff;
+	position: absolute;
+	height: 48px;
+	width: 48px;
+}
+
+.nav__mobile__menu-icon--anchor2 {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+}
+
+.nav__mobile__menu-icon--label {
+	display: block;
+	position: absolute;
+	opacity: 0.8;
+	z-index: 3;
+	top: 0;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.nav__mobile__menu-icon__bread {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	width: 30px;
+	height: 30px;
+}
+
+.nav__mobile__menu-icon__bread-top {
+	transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+		-webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+	transform: none;
+	z-index: 4;
+}
+
+.nav__mobile__menu-icon__bread-bottom {
+	transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+		-webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+	transform: none;
+	z-index: 3;
+}
+
+.nav__mobile__menu-icon__bread-crust {
+	display: block;
+	width: 17px;
+	height: 1px;
+	background: #fff;
+	background-origin: padding-box;
+	background-clip: border-box;
+	border-radius: 0.5px;
+	position: absolute;
+	left: 7px;
+	z-index: 1;
+}
+
+.nav__mobile__menu-icon__bread-crust-top {
+	top: 14px;
+	transform: translateY(-3px) scaleX(0.88235);
+	transition: transform 0.1596 cubic-bezier(0.52, 0.16, 0.52, 0.84),
+		-webkit-transform 0.1596 cubic-bezier(0.52, 0.16, 0.52, 0.84);
+}
+
+.nav__mobile__menu-icon__bread-crust-bottom {
+	bottom: 14px;
+	transform: translateY(3px) scaleX(0.88235);
+	transition: transform 0.1596 cubic-bezier(0.52, 0.16, 0.52, 0.84),
+		-webkit-transform 0.1596 cubic-bezier(0.52, 0.16, 0.52, 0.84);
+}
+
+.a-button-open {
+	background-color: lightblue;
+}
+#a-buttonstate:checked ~ .stuff,
+#a-buttonstate:target ~ .stuff {
+	background-color: lightgreen;
 }

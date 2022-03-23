@@ -14,7 +14,7 @@
 		<title>Ancient Architecture</title>
 	</head>
 	<body id="BODY">
-		<nav id="NAV">
+		<!-- <nav id="NAV">
 			<div class="nav__container">
 				<div class="nav__mobile-menu__container">
 					<div class="nav__mobile-menu__hamburger">
@@ -38,16 +38,51 @@
 					</div>
 				</div>
 			</div>
-		</nav>
+		</nav> -->
 		<nav id="NAV2">
 			<div class="nav__container2">
 				<ul class="nav__mobile__container2">
 					<li class="nav__mobile__menu-icon2">
-						<a class="nav__mobile__menu-icon--open2" role="button">
+						<a
+							class="nav__mobile__menu-icon--open2"
+							href="#nav-mobile-menustate"
+							role="button"
+						>
 							<span class="nav__mobile__menu-icon--anchor2">Global Nav Open Menu</span>
 						</a>
-						<a class="nav__mobile__menu-icon--close2" role="button"></a>
-						<label></label>
+						<a class="nav__mobile__menu-icon--close2" href="#" role="button">
+							<span class="nav__mobile__menu-icon--anchor2">
+								Global Nav Close Menu
+							</span>
+						</a>
+						<label
+							class="nav__mobile__menu-icon--label"
+							for="nav-mobile-menustate"
+							aria-hidden="true"
+						>
+							<span
+								class="nav__mobile__menu-icon__bread nav__mobile__menu-icon__bread-top"
+							>
+								<span
+									class="
+										nav__mobile__menu-icon__bread-crust
+										nav__mobile__menu-icon__bread-crust-top
+									"
+								></span>
+							</span>
+							<span
+								class="
+									nav__mobile__menu-icon__bread nav__mobile__menu-icon__bread-bottom
+								"
+							>
+								<span
+									class="
+										nav__mobile__menu-icon__bread-crust
+										nav__mobile__menu-icon__bread-crust-bottom
+									"
+								></span>
+							</span>
+						</label>
 					</li>
 					<li class="nav__mobile__logo2"></li>
 					<li class="nav__mobile__contact2"></li>
@@ -56,11 +91,17 @@
 					<li></li>
 					<li>
 						<a><span>Ancient Architecture</span></a>
+						<a class="a-button-open" role="button" href="#a-buttonstate">
+							<span>Button</span>
+						</a>
+						<a class="a-button-close" role="button" href="#">
+							<span>Button</span>
+						</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
-		<div>STUFF</div>
+		<div class="stuff">STUFF</div>
 		<footer id="FOOTER">BYE</footer>
 	</body>
 </html>
