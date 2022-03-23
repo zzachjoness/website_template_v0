@@ -38,7 +38,6 @@ a {
 }
 
 #NAV {
-	font-size: 1.2rem;
 	background-color: rgba(11, 23, 40, 100);
 	color: whitesmoke;
 }
@@ -51,21 +50,21 @@ a {
 .nav__container {
 	display: flex;
 	position: relative;
-	height: 3rem;
+	height: 4rem;
 	align-items: center;
 }
 
 .nav__mobile-menu__container {
 	visibility: hidden;
 	position: absolute;
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 3rem;
+	height: 3rem;
 	margin: 0 1rem;
 }
 
 .nav__mobile-menu__hamburger {
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 3rem;
+	height: 3rem;
 }
 
 .nav__content__container {
@@ -79,6 +78,8 @@ a {
 
 .nav__title__container {
 	justify-items: center;
+	height: 3rem;
+	line-height: 3rem;
 }
 
 .nav__link-list__container {
@@ -88,9 +89,8 @@ a {
 
 .nav__link-list {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
 	justify-content: space-between;
+	line-height: 3rem;
 	align-items: center;
 }
 
@@ -99,6 +99,7 @@ a {
 	color: whitesmoke;
 	margin-left: 1rem;
 	font-size: 1.5rem;
+	height: 3rem;
 }
 
 @media screen and (max-width: 912px) {
@@ -112,4 +113,12 @@ a {
 		display: none;
 		visibility: hidden;
 	}
+}
+
+/* NAV 2 TESTING */
+
+#NAV2 {
+	margin-top: 2rem;
+	background-color: rgba(11, 23, 40, 100);
+	color: whitesmoke;
 }
