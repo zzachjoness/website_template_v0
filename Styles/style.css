@@ -233,6 +233,10 @@ a {
 		-webkit-transform 0.1596 cubic-bezier(0.52, 0.16, 0.52, 0.84);
 }
 
+.nav__mobile__menu-icon--open2:checked ~ #NAV2 {
+	background-color: black;
+}
+
 .a-button-open {
 	background-color: lightblue;
 }
