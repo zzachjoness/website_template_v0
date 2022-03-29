@@ -303,6 +303,48 @@ NAV 1 TESTING
 	transform: none;
 }
 
+.nav__mobile__menu-brand {
+	position: absolute;
+	width: 48px;
+	top: 0;
+	left: 50%;
+	margin-left: -24px;
+	text-align: center;
+	z-index: 1;
+}
+
+.nav__mobile__link__brand {
+	background-position: center center;
+}
+
+.nav__mobile__link__brand {
+	width: 14px;
+	background-size: 14px 44px;
+	background-repeat: no-repeat;
+	background-image: url("/SVG/aa-logo.svg");
+}
+
+.nav__mobile-menu-link {
+	/* may need line height */
+	display: inline-block;
+	position: relative;
+	height: 48px;
+	padding: 0 8px;
+}
+
+.nav__mobile__menu-link-text {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
+	top: 50%;
+}
+
 @media only screen and (max-width: 833px) {
 	#NAV2 {
 		/* background-color: rgba(11, 23, 40, 100); */
@@ -329,5 +371,16 @@ NAV 1 TESTING
 
 	.nav__mobile__container {
 		display: block;
+	}
+
+	.nav__mobile__menu-brand {
+		display: block;
+	}
+
+	.nav__mobile__link__brand {
+		width: 17px;
+		background-size: 17px 48px;
+		background-repeat: no-repeat;
+		background-image: url("/SVG/aa-logo.svg");
 	}
 }
