@@ -266,6 +266,21 @@ li {
 	top: 50%;
 }
 
+.nav__mobile-menu__list {
+	display: flex;
+	cursor: default;
+	color: whitesmoke;
+	height: 44px;
+	width: auto;
+	justify-content: space-between;
+	user-select: none;
+}
+
+#nav-mobile-menustate:checked ~ #NAV .nav__mobile-menu__list {
+	visibility: visible;
+	background-color: lightcoral;
+}
+
 @media only screen and (max-width: 833px) {
 	#NAV {
 		background-color: black;
@@ -302,5 +317,12 @@ li {
 		background-size: 17px 48px;
 		background-repeat: no-repeat;
 		background-image: url("/SVG/aa-logo--ws.svg");
+	}
+
+	.nav__mobile-menu__list {
+		visibility: hidden;
+		display: block;
+		margin: 48px;
+		height: auto;
 	}
 }
