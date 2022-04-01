@@ -47,6 +47,9 @@ li {
 	display: none;
 }
 
+html #globalnav {
+	position: fixed;
+}
 #globalnav {
 	position: absolute;
 	top: 0;
@@ -56,19 +59,21 @@ li {
 	z-index: 9999;
 	width: 100%;
 	height: 48px;
-	max-height: 44px; /* need to look at this */
+	max-height: 44px;
 	display: block;
 	background: rgba(0, 0, 0, 0.92);
+	font-size: 17px; /* need to reivew */
 	user-select: none;
 }
 
-.gn-content {
+#globalnav .gn-content {
+	margin: 0 auto;
 	max-width: 980px;
 	position: relative;
 	z-index: 2;
 }
 
-.gn-header {
+#globalnav .gn-header {
 	display: none;
 	position: absolute;
 	z-index: 5;
@@ -268,7 +273,7 @@ li {
 	top: 50%;
 }
 
-.gn-list {
+#globalnav .gn-list {
 	display: flex;
 	cursor: default;
 	color: whitesmoke;
@@ -302,7 +307,7 @@ li {
 		position: absolute;
 	}
 
-	.gn-header {
+	#globalnav .gn-header {
 		display: block;
 	}
 
@@ -317,8 +322,7 @@ li {
 		background-image: url("/SVG/aa-logo--ws.svg");
 	}
 
-	.gn-list {
-		visibility: hidden;
+	#globalnav .gn-list {
 		display: block;
 		position: absolute;
 		z-index: 1;
@@ -329,9 +333,11 @@ li {
 		padding: 45px 40px 8px;
 		margin: 0 auto;
 		overflow-y: auto;
-		height: 100%;
+		height: auto; /* had 100% */
+		visibility: hidden;
 		max-width: 664px;
 		-webkit-transition: visibility 0s linear 1s;
+		transition: visibility 0s linear 1s;
 	}
 
 	#nav-mobile-menustate:checked ~ #globalnav .gn-list {
