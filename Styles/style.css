@@ -91,6 +91,12 @@ html #globalnav {
 	position: relative;
 	z-index: 1;
 	vertical-align: top;
+	color: whitesmoke;
+}
+
+#globalnav .gn-header .gn-item,
+#globalnav .gn-header .gn-link {
+	height: 48px;
 }
 
 #globalnav .gn-menuicon {
@@ -101,7 +107,7 @@ html #globalnav {
 	border-bottom: none;
 }
 
-.gn-anchor {
+#globalnav .gn-anchor {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -123,7 +129,7 @@ html #globalnav {
 	display: block;
 }
 
-.gn-anchor-label {
+#globalnav .gn-anchor-label {
 	position: absolute;
 	clip: rect(1px, 1px, 1px, 1px);
 	-webkit-clip-path: inset(0px 0px 99.9% 99.9%);
@@ -135,7 +141,7 @@ html #globalnav {
 	border: 0;
 }
 
-.gn-icon--label {
+#globalnav .gn-icon--label {
 	display: block;
 	position: absolute;
 	z-index: 3;
@@ -145,7 +151,7 @@ html #globalnav {
 	cursor: pointer;
 }
 
-.gn-icon__bread {
+#globalnav .gn-icon__bread {
 	position: absolute;
 	top: 9px;
 	left: 9px;
@@ -154,7 +160,7 @@ html #globalnav {
 	z-index: 3;
 }
 
-.gn-icon__bread-crust {
+#globalnav .gn-icon__bread-crust {
 	display: block;
 	width: 17px;
 	height: 1px;
@@ -167,7 +173,7 @@ html #globalnav {
 	z-index: 1;
 }
 
-.gn-icon__bread-top {
+#globalnav .gn-icon__bread-top {
 	transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 	transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 	transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
@@ -190,7 +196,7 @@ html #globalnav {
 	-webkit-transform: rotate(45deg);
 }
 
-.gn-icon__bread-crust-top {
+#globalnav .gn-icon__bread-crust-top {
 	top: 14px;
 	transform: translateY(-3px) scaleX(0.88235);
 	transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84);
@@ -203,7 +209,7 @@ html #globalnav {
 	transform: none;
 }
 
-.gn-icon__bread-bottom {
+#globalnav .gn-icon__bread-bottom {
 	transition: transform 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96),
 		-webkit-transform 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96);
 	transform: none;
@@ -217,7 +223,7 @@ html #globalnav {
 	transform: rotate(-45deg);
 }
 
-.gn-icon__bread-crust-bottom {
+#globalnav .gn-icon__bread-crust-bottom {
 	bottom: 14px;
 	transform: translateY(3px) scaleX(0.88235);
 	transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84);
@@ -240,7 +246,15 @@ html #globalnav {
 	z-index: 1;
 }
 
+#globalnav .gn-header .gn-link {
+	line-height: 2.823em;
+}
+
 #globalnav .gn-link-brand {
+	width: 17px;
+	background-size: 17px 48px;
+	background-repeat: no-repeat;
+	background-image: url("/SVG/aa-logo--ws.svg");
 	background-position: center center;
 }
 
@@ -250,7 +264,7 @@ html #globalnav {
 	background-repeat: no-repeat;
 }
 
-.gn-link {
+#globalnav .gn-link {
 	/* may need line height */
 	display: inline-block;
 	position: relative;
@@ -258,9 +272,13 @@ html #globalnav {
 	padding: 0 8px;
 	opacity: 1;
 	z-index: 1;
+	font-size: 12px;
+	line-height: 3.666;
+	background: no-repeat;
+	color: white;
 }
 
-.gn-link-text {
+#globalnav .gn-link-text {
 	position: absolute;
 	clip: rect(1px, 1px, 1px, 1px);
 	-webkit-clip-path: inset(0px 0px 99.9% 99.9%);
@@ -276,7 +294,6 @@ html #globalnav {
 #globalnav .gn-list {
 	display: flex;
 	cursor: default;
-	color: whitesmoke;
 	height: 44px;
 	width: auto;
 	/* margin: 0 -8px; */
@@ -320,6 +337,7 @@ html #globalnav {
 		background-size: 17px 48px;
 		background-repeat: no-repeat;
 		background-image: url("/SVG/aa-logo--ws.svg");
+		background-position: center center;
 	}
 
 	#globalnav .gn-list {
@@ -343,18 +361,38 @@ html #globalnav {
 	#nav-mobile-menustate:checked ~ #globalnav .gn-list {
 		visibility: visible;
 		transition-delay: 0ms;
+		-webkit-transition-delay: 0ms;
 	}
 
-	.gn-item {
+	#globalnav .gn-item {
 		width: 100%;
 		height: 44px;
+	}
+
+	#globalnav .gn-item-menu {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#nav-mobile-menustate:checked ~ #globalnav .gn-item-menu {
+		opacity: 1;
+		pointer-events: auto;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	#globalnav .gn-item-menu .gn-link {
+		display: block;
+		background-position: left center;
+		width: auto;
+		max-width: none;
 	}
 
 	#globalnav .gn-list .gn-item-menu:nth-child(2) {
 		padding-top: 1px;
 	}
 
-	#nav-mobile-menustate:checked ~ #globalnav .gn-menu__liest-item-menu {
+	#nav-mobile-menustate:checked ~ #globalnav .gn-menu__list-item-menu {
 		transition: opacity 0.3091s cubic-bezier(0.32, 0.08, 0.24, 1) 0.03s,
 			transform 0.3455s cubic-bezier(0.32, 0.08, 0.24, 1) 0.02s,
 			-webkit-transform 0.3455s cubic-bezier(0.32, 0.08, 0.24, 1) 0.02s;
