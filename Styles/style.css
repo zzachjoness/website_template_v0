@@ -10,6 +10,11 @@
 	font-family: "Noto Serif Display", serif;
 }
 
+body {
+	min-width: 320px;
+	display: block;
+}
+
 h1 {
 	font-size: 2rem;
 }
@@ -91,7 +96,15 @@ html #globalnav {
 	position: relative;
 	z-index: 1;
 	vertical-align: top;
-	color: whitesmoke;
+}
+
+#globalnav .gn-item {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	height: 44px;
+	z-index: 1;
+	vertical-align: top;
 }
 
 #globalnav .gn-header .gn-item,
@@ -247,7 +260,8 @@ html #globalnav {
 }
 
 #globalnav .gn-header .gn-link {
-	line-height: 2.823em;
+	line-height: 2.823rem;
+	color: white;
 }
 
 #globalnav .gn-link-brand {
@@ -268,14 +282,15 @@ html #globalnav {
 	/* may need line height */
 	display: inline-block;
 	position: relative;
-	height: 48px;
+	height: 44px;
 	padding: 0 8px;
 	opacity: 1;
-	z-index: 1;
 	font-size: 12px;
-	line-height: 3.666;
+	line-height: 3.666em;
 	background: no-repeat;
 	color: white;
+	line-height: 3em;
+	white-space: nowrap;
 }
 
 #globalnav .gn-link-text {
@@ -299,6 +314,8 @@ html #globalnav {
 	/* margin: 0 -8px; */
 	justify-content: space-between;
 	user-select: none;
+	color: white;
+	visibility: visible;
 }
 
 @media only screen and (max-width: 833px) {
@@ -351,7 +368,8 @@ html #globalnav {
 		padding: 45px 40px 8px;
 		margin: 0 auto;
 		overflow-y: auto;
-		height: auto; /* had 100% */
+		box-sizing: border-box;
+		height: auto; /* also using 100% */
 		visibility: hidden;
 		max-width: 664px;
 		-webkit-transition: visibility 0s linear 1s;
@@ -388,11 +406,11 @@ html #globalnav {
 		max-width: none;
 	}
 
-	#globalnav .gn-list .gn-item-menu:nth-child(2) {
-		padding-top: 1px;
+	#globalnav .gn-list .gn-item-menu:nth-child(1) {
+		transform: translatey(-44);
 	}
 
-	#nav-mobile-menustate:checked ~ #globalnav .gn-menu__list-item-menu {
+	#nav-mobile-menustate:checked ~ #globalnav .gn-item-menu {
 		transition: opacity 0.3091s cubic-bezier(0.32, 0.08, 0.24, 1) 0.03s,
 			transform 0.3455s cubic-bezier(0.32, 0.08, 0.24, 1) 0.02s,
 			-webkit-transform 0.3455s cubic-bezier(0.32, 0.08, 0.24, 1) 0.02s;
