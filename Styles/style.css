@@ -7,7 +7,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
-	font-family: "Popins", sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -289,6 +289,13 @@ html #globalnav {
 	background-repeat: no-repeat;
 }
 
+#globalnav .gn-list .gn-item-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.5rem;
+}
+
 #globalnav .gn-link {
 	/* may need line height */
 	display: inline-block;
@@ -302,19 +309,22 @@ html #globalnav {
 	color: white;
 	line-height: 3em;
 	white-space: nowrap;
-	font-size: 12px;
+	font-family: "poppins", sans-serif;
+	font-size: 28px;
+	align-self: center;
 }
 
 #globalnav .gn-link-01 {
-	background-image: url(/SVG/aa-links-01.svg);
-	background-size: 28px 44px;
+	background-image: url(/SVG/nav-01.svg);
+	background-size: 19px 44px;
 	background-repeat: no-repeat;
 	background-origin: content-box;
 	background-size: cover;
 	background-position: center center;
-	width: 50px;
+	width: 2.5rem;
 	max-width: 50px;
-	font-size: 12px;
+	font-size: 16px;
+	font-family: "Poppins", sans-serif;
 }
 
 #globalnav .gn-link-text {
@@ -328,6 +338,7 @@ html #globalnav {
 	padding: 0;
 	border: 0;
 	top: 50%;
+	font-family: "Poppins", sans-serif;
 }
 
 #globalnav .gn-list {
@@ -348,6 +359,10 @@ html #globalnav {
 	font-style: italic;
 	font-weight: 900;
 	padding-top: 1rem;
+}
+
+.more-stuff {
+	font-size: 16px;
 }
 
 @media only screen and (max-width: 833px) {
