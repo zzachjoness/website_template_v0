@@ -7,7 +7,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
-	font-family: "Noto Serif Display", serif;
+	font-family: "Popins", sans-serif;
 }
 
 body {
@@ -302,6 +302,19 @@ html #globalnav {
 	color: white;
 	line-height: 3em;
 	white-space: nowrap;
+	font-size: 12px;
+}
+
+#globalnav .gn-link-01 {
+	background-image: url(/SVG/aa-links-01.svg);
+	background-size: 28px 44px;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	background-size: cover;
+	background-position: center center;
+	width: 50px;
+	max-width: 50px;
+	font-size: 12px;
 }
 
 #globalnav .gn-link-text {
@@ -327,6 +340,14 @@ html #globalnav {
 	user-select: none;
 	color: white;
 	visibility: visible;
+}
+
+.stuff {
+	margin-top: 48px;
+	font-size: 38px;
+	font-style: italic;
+	font-weight: 900;
+	padding-top: 1rem;
 }
 
 @media only screen and (max-width: 833px) {
