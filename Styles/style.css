@@ -125,7 +125,8 @@ html #globalnav {
 	position: relative;
 	height: 44px;
 	z-index: 1;
-	vertical-align: top;
+	text-align: center;
+	line-height: 44px;
 }
 
 #globalnav .gn-header .gn-item,
@@ -282,7 +283,6 @@ html #globalnav {
 }
 
 #globalnav .gn-header .gn-link {
-	line-height: 2.823rem;
 	color: #fff;
 }
 
@@ -311,15 +311,20 @@ html #globalnav {
 	padding: 0 8px;
 	opacity: 1;
 	font-size: 12px;
-	line-height: 3.666em;
 	background: no-repeat;
-	color: white;
+	color: #fff;
+	opacity: 0.8;
 	line-height: 3em;
 	white-space: nowrap;
 	font-family: "poppins", sans-serif;
-	font-size: 28px;
 	align-self: center;
+	justify-content: center;
 	z-index: 1;
+	-webkit-transition: opacity 0.5s ease-in-out;
+}
+
+#globalnav .gn-link:hover {
+	opacity: 1;
 }
 
 #globalnav .gn-link-text {
@@ -427,6 +432,7 @@ html #globalnav {
 	#globalnav .gn-item {
 		opacity: 0.8;
 		height: 48px;
+		width: 100%;
 		-webkit-transition: opacity 0.5s ease-in-out;
 	}
 
@@ -436,6 +442,9 @@ html #globalnav {
 	#globalnav .gn-item-menu {
 		opacity: 0;
 		/* pointer-events: none; */
+	}
+	#globalnav .gn-menu-00 {
+		display: none;
 	}
 
 	#globalnav .gn-item:hover {
