@@ -96,6 +96,7 @@ html #globalnav {
 
 #globalnav .gn-content {
 	margin: 0 auto;
+	padding: 0 22px;
 	max-width: 980px;
 	position: relative;
 	z-index: 2;
@@ -366,6 +367,49 @@ html #globalnav {
 	font-size: 16px;
 }
 
+#globalfooter {
+	min-width: 1024px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	padding: 0 22px;
+	background-color: gainsboro;
+	height: 100px;
+}
+
+#globalfooter .gf-content {
+	max-width: 980px;
+	margin: 0 auto;
+	position: relative;
+	height: 100px;
+}
+
+#globalfooter .gf-directory {
+	display: flex;
+	padding-top: 20px;
+	flex-wrap: nowrap;
+	font-size: 12px;
+}
+
+#globalfooter .gf-directory-column {
+	flex-basis: 25%;
+	background-color: lightblue;
+}
+
+#globalfooter .gf-directory-column-section-title {
+	font-size: 12px;
+	font-weight: 600;
+	margin-right: 20px;
+	margin-bottom: 0.8em;
+	color: black;
+}
+
+@media only screen and (max-width: 1044px) {
+	#globalfooter {
+		min-width: 320px;
+	}
+}
+
 @media only screen and (max-width: 833px) {
 	#globalnav {
 		background-color: black;
@@ -381,7 +425,7 @@ html #globalnav {
 			height 0.56s cubic-bezier(0.52, 0.16, 0.24, 1);
 	}
 
-	.gn-content {
+	#globalnav .gn-content {
 		height: 100%;
 		width: 100%;
 		top: 0;
