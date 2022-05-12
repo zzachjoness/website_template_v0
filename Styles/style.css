@@ -402,6 +402,7 @@ html #globalnav {
 }
 
 #globalfooter .gf-directory-column-section {
+	pointer-events: none;
 }
 
 #globalfooter .gf-directory-column-section-title {
@@ -544,5 +545,44 @@ html #globalnav {
 		transition: opacity 0.3091s cubic-bezier(0.32, 0.08, 0.24, 1) 0.03s,
 			transform 0.3455s cubic-bezier(0.32, 0.08, 0.24, 1) 0.02s,
 			-webkit-transform 0.3455s cubic-bezier(0.32, 0.08, 0.24, 1) 0.02s;
+	}
+
+	#globalfooter .gf-directory {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-direction: column;
+	}
+
+	#globalfooter .gf-directory-column {
+		flex-basis: auto;
+	}
+
+	#globalfooter .gf-directory-column-section {
+		position: relative;
+		overflow: hidden;
+		border-bottom: 1px solid #d2d2d7;
+		z-index: 1;
+		pointer-events: auto;
+		margin: 0;
+	}
+
+	#globalfooter .gf-directory-column-section-list {
+		visibility: hidden;
+		overflow: hidden;
+		margin: 0;
+		padding-top: 5px;
+		padding-bottom: 16px;
+		position: absolute;
+	}
+
+	#globalfooter .gf-directory-column-section-title {
+		font-weight: 400;
+		margin: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		cursor: pointer;
+		position: relative;
+		user-select: none;
+		z-index: 2;
 	}
 }
