@@ -405,12 +405,17 @@ html #globalnav {
 	pointer-events: none;
 }
 
+#globalfooter .gf-directory-column-section-state {
+	display: none;
+}
+
 #globalfooter .gf-directory-column-section-title {
 	font-size: 12px;
 	font-weight: 600;
 	margin-right: 20px;
 	line-height: 1.333337;
 	margin-bottom: 0.8em;
+	background-color: #f5f5f7;
 }
 
 #globalfooter .gf-directory-column-section-anchor {
@@ -422,6 +427,21 @@ html #globalnav {
 	width: 1px;
 	height: 1px;
 	z-index: 10;
+}
+
+#globalfooter .gf-directory-column-section-anchor-close {
+	display: none;
+}
+
+#globalfooter .gf-directory-column-section-anchor-label {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
 }
 
 #globalfooter .gf-directory-column-section-list {
@@ -596,9 +616,42 @@ html #globalnav {
 	#globalfooter .gf-directory-column-section-title::after {
 		content: "+";
 		float: right;
+		/* margin-top: -2px;  need to 2x check on this*/
+		margin-right: 8px;
+		transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+	}
+
+	#globalfooter
+		.gf-directory-column-section-state:checked
+		+ .gf-directory-column-section
+		.gf-directory-column-section-title {
+		color: #000;
+	}
+
+	#globalfooter
+		.gf-directory-column-section-state:checked
+		+ .gf-directory-column-section
+		.gf-directory-column-section-title::after {
+		-webkit-transform: rotate(45deg) scale(1.08);
+		transform: rotate(45deg) scale(1.08);
 	}
 
 	#globalfooter .gf-directory-column-section-anchor {
+		display: block;
+	}
+
+	#globalfooter
+		.gf-directory-column-section-state:checked
+		+ .gf-directory-column-section
+		.gf-directory-column-section-anchor-open {
+		display: none;
+	}
+
+	#globalfooter
+		.gf-directory-column-section-state:checked
+		+ #globalfooter
+		.gf-directory-column-section
+		.gf-directory-column-section-anchor-close {
 		display: block;
 	}
 
@@ -609,5 +662,21 @@ html #globalnav {
 		padding-top: 5px;
 		padding-bottom: 16px;
 		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-100px);
+		z-index: -1;
+	}
+
+	#globalfooter
+		.gf-directory-column-section-state:checked
+		+ .gf-directory-column-section
+		.gf-directory-column-section-list {
+		z-index: 1;
+		visibility: visible;
+		position: static;
+		transform: none;
+		transition: transform 300ms ease, -webkit-transform 300ms ease;
 	}
 }
