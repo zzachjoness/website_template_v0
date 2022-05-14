@@ -413,6 +413,17 @@ html #globalnav {
 	margin-bottom: 0.8em;
 }
 
+#globalfooter .gf-directory-column-section-anchor {
+	right: 0;
+	cursor: default;
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 1px;
+	height: 1px;
+	z-index: 10;
+}
+
 #globalfooter .gf-directory-column-section-list {
 	margin-right: 20px;
 	list-style-type: none;
@@ -566,15 +577,6 @@ html #globalnav {
 		margin: 0;
 	}
 
-	#globalfooter .gf-directory-column-section-list {
-		visibility: hidden;
-		overflow: hidden;
-		margin: 0;
-		padding-top: 5px;
-		padding-bottom: 16px;
-		position: absolute;
-	}
-
 	#globalfooter .gf-directory-column-section-title {
 		font-weight: 400;
 		margin: 0;
@@ -584,5 +586,28 @@ html #globalnav {
 		position: relative;
 		user-select: none;
 		z-index: 2;
+		color: #6e6e73;
+	}
+
+	#globalfooter .gf-directory-column-section-title:hover {
+		color: #000;
+	}
+
+	#globalfooter .gf-directory-column-section-title::after {
+		content: "+";
+		float: right;
+	}
+
+	#globalfooter .gf-directory-column-section-anchor {
+		display: block;
+	}
+
+	#globalfooter .gf-directory-column-section-list {
+		visibility: hidden;
+		overflow: hidden;
+		margin: 0;
+		padding-top: 5px;
+		padding-bottom: 16px;
+		position: absolute;
 	}
 }
